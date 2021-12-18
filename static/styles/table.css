@@ -1,0 +1,128 @@
+
+#submit-edit{
+    margin:20px auto;
+    display:none;
+}
+
+.tableInput {
+    display: none;
+    height:100%;
+    width:100%;
+    background-color:#38444c;
+    font-size:16px;
+    outline: none!important;
+    box-shadow:none!important;
+    border:0;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.tableElement{
+    display:block;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+#edit-button:hover{
+    background-color:#7390aa;
+    cursor:pointer;
+}
+
+#edit-button{
+    display:block;
+    background:transparent;
+    float:left;
+    width:60px;
+    height:100%;
+    float:right;
+    border:0px solid #555;
+}
+
+#edit-button i{
+    margin-left:21px;
+    margin-bottom:5px;
+    --ggs:1.6;
+}
+
+#table{
+    position: relative;
+    margin: 20px auto;
+    min-width:50%;
+    max-width:95%;
+    border: 1px solid white;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;  
+    border-collapse: collapse;
+}
+
+#table th {
+    background-color:black;
+    cursor: pointer;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+#table td {
+    background-color:#373737;
+    outline: none;
+    box-shadow:none;
+}
+
+th, td{
+    border: 1px solid white;
+}
+
+#table tr:hover td{
+    background-color: black;
+}
+
+.button-3 {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .button-3:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-3:hover {
+    background-color: #2c974b;
+  }
+  
+  .button-3:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-3:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-3:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }

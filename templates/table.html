@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}Table {{ table_name }}{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/table.css') }}">
+    <script src="{{ url_for('static',filename='scripts/table.js') }}"></script>
+{% endblock %}
+
+{% block topbar %}
+    <button onclick="edit()" id="edit-button">
+        <i class="gg-pen"></i>
+    </button>
+{% endblock %}
+
+{% block content %}
+<form action = "/table/{{ table_name }}/submit" method = "POST" spellcheck = "false" autocomplete = "off">
+    <table id = "table">
+        <tr> 
+            {% for i in range(column_names | length) %}
+                <th {{ jsfunctions[i] }}> {{ column_names[i] }} </th>
+            {% endfor %}
+        </tr>
+        {% for i in range(total | length) %}
+            <tr>
+            {% for j in range(total[i] | length) %}
+                <td><input class = "tableInput" value="{{total[i][j]}}" name = "{{i}},{{j}}"><span class = "tableElement">{{total[i][j]}}</span></td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <button class = "button-3" id="submit-edit">SUBMIT CHANGES</button>
+</form>
+{% endblock %}

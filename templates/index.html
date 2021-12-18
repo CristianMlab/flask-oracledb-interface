@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+{% endblock %}
+
+{% block content %}
+    {% for i in range(table_names | length) %}
+        <div class = "table_tile">
+            <h2 class="table_tile_top"><span class = "table_tile_text"><a href ="{{ url_for('showtable', table_name = table_names[i]) }}">{{table_names[i] | title}}</a></span></h2>
+            <h4 class = "table_tile_text">Primary Key(s): {% for key in primaryKeys[i] %} <span class="primary_key">{{key}}</span> {% endfor %}</h4>
+            <h4 class = "table_tile_text">Foreign Key(s): 
+                {% for key in foreignKeys[i] %} 
+                    <a class="table_ref" href ="{{ url_for('showtable', table_name = key[0]) }}">{{key[0]}}</a>.<span class="primary_key">{{key[1]}}</span> 
+                {% endfor %}
+            </h4>
+            <h4 class = "table_tile_text">Columns: {{columns[i]}}</h4>
+            <h4 class = "table_tile_text">Rows: {{rows[i]}}</h4>
+        </div>
+    {% endfor %}
+{% endblock %}

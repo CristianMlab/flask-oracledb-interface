@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://css.gg/home.css' rel='stylesheet'>
+        <link href='https://css.gg/pen.css' rel='stylesheet'>
+        <link href='https://css.gg/search.css' rel='stylesheet'>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/layout.css') }}">
+        <title>{% block title %}{% endblock %}</title>
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div id='wrapper'>
+            <div id="top">
+                <div id = "start">
+                    <a href = "{{url_for('index')}}">
+                        <button id = "home-button" >
+                            <i class="gg-home"></i>
+                        </button>
+                    </a>
+                </div>
+                <div id = "center">
+                    <form id="form" action = "/table" method = "POST" spellcheck = "false" autocomplete = "off">
+                        <input type="text" placeholder= "enter a table name" id="table_name" name="table_name">
+                        <button id="search-button">
+                            <i class="gg-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <div id = "end">
+                    {% block topbar %} {% endblock %}
+                </div>
+            </div>
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

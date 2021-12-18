@@ -1,0 +1,36 @@
+a { color: inherit; } 
+
+.table_tile{
+    min-width:500px;
+    width:50%;
+    height:150px;
+    background-color:#242526;
+    border: 1px solid #555;
+    margin-bottom:10px;
+    margin-top:15px;
+    margin-left:100px;
+    overflow: auto;
+}
+
+
+.table_tile_top{
+    background-color:#141414;
+    border-bottom: 1px solid #555;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+
+.table_tile_text{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:8px;
+    margin-left:10px;
+    color:white;
+}
+
+.table_ref{
+    color:#af7db3;
+}
+
+.primary_key{
+    color:#2596be;
+}
